@@ -5,8 +5,6 @@ DNS_RULES_FILE="/usr/share/suricata/rules/dns-events.rules"
 HTTP_RULES_FILE="/usr/share/suricata/rules/http-events.rules"
 
 # Define DNS rules
-DNS_RULES="""alert dns any any -> any any (msg:\"SURICATA DNS Z flag set\"; app-layer-event:dns.z_flag_set; classtype:protocol-command-decode; sid:2240006; rev:2;)
-alert dns any any -> any any (msg:\"SURICATA DNS Invalid opcode\"; app-layer-event:dns.invalid_opcode; classtype:protocol-command-decode; sid:2240007; rev:1;)
 alert dns any any -> any any (msg:\"Potential 3CX Supply Chain Compromise - Suspicious DNS Query Detected\"; dns.query; content:\"akamaicontainer.com\"; nocase; sid:1000001; rev:1;)
 alert dns any any -> any any (msg:\"Potential 3CX Supply Chain Compromise - Suspicious DNS Query Detected\"; dns.query; content:\"akamaitechcloudservices.com\"; nocase; sid:1000002; rev:1;)
 alert dns any any -> any any (msg:\"Potential 3CX Supply Chain Compromise - Suspicious DNS Query Detected\"; dns.query; content:\"azuredeploystore.com\"; nocase; sid:1000003; rev:1;)
