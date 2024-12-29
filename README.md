@@ -4,7 +4,7 @@ This repository contains custom Suricata rules designed to enhance threat detect
 
 ## Features
 
-- **DNS Rules**: Detect suspicious DNS queries, such as those related to the 3CX supply chain compromise, and identify anomalies like invalid opcodes and Z-flag usage.
+- **DNS Rules**: Detect suspicious DNS queries, such as those related to the 3CX supply chain compromise.
 - **HTTP Rules**: Monitor for malicious HTTP requests, such as downloads of malicious `.ICO` files from known compromised sources.
 - **Easy Integration**: The rules can be seamlessly integrated into existing Suricata setups.
 
